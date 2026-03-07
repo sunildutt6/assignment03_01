@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Roboto:wght@400;500;700&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+  padding-bottom: 70px; /* space for fixed footer */
+}
+
+/* Container */
+.container {
+  width: 100%;
+  padding: 0 16px;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column; /* mobile-first */
+  gap: 10px;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+.brand-title {
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 6px 10px;
+  background: #fafafa;
+}
+
+.nav a.active {
+  background: #e0e7ff;
+  border-color: #c7d2fe;
+}
+
+/* Main */
+.main { padding: 18px 0; }
+
+.page-title {
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.lead {
+  margin: 0 0 16px;
+  color: #555;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+/* Flex groups (mobile-first) */
+.flex-row,
+.hero,
+.products,
+.actions,
+.form-row,
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+/* Hero image */
+.hero img {
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Buttons */
+.btn {
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #222;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: #2b59ff;
+  color: #fff;
+}
+
+/* Products */
+.product { position: relative; }
+
+.product img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.product h3 {
+  font-family: "Noto Serif", Georgia, serif;
+  margin: 6px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #0f766e;
+}
+
+/* Absolute badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label { font-weight: 500; }
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Table */
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+th { background: #e6f7ff; }
+
+/* Detail page */
+.detail-image {
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.detail-title {
+  font-family: "Noto Serif", Georgia, serif;
+  margin-top: 0;
+}
+
+.detail-text {
+  margin: 10px 0;
+  color: #444;
+}
+
+.detail-list {
+  padding-left: 18px;
+  margin-bottom: 16px;
+}
+
+.detail-list li { margin-bottom: 6px; }
+
+/* Footer */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding: 12px 0;
+}
+
+.footer-inner a {
+  color: #2b59ff;
+  text-decoration: none;
+}
+
+/* Form card container */
+.form-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Form layout */
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Label styling */
+.form-layout label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Input and select */
+.form-layout input,
+.form-layout select,
+.form-layout textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-layout input:focus,
+.form-layout select:focus,
+.form-layout textarea:focus {
+  border-color: #333;
+}
+
+/* Form buttons row */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Optional field group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Two-column layout for larger screens */
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row .form-group {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Desktop (>=800px) */
+@media (min-width: 800px) {
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero,
+  .flex-row,
+  .products,
+  .actions,
+  .form-row,
+  .footer-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hero img { max-width: 520px; }
+
+  .form-row div {
+    flex: 1 1 220px;
+    min-width: 200px;
+  }
+
+  .flex-col {
+    flex: 1 1 420px;
+    min-width: 320px;
+  }
+
+  .product {
+    flex: 1 1 260px;
+    min-width: 240px;
+  }
+
+  .footer-inner { justify-content: space-between; }
+}
+
+@media (min-width: 1200px) {
+  .page-title { font-size: 28px; }
+}
