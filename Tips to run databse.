@@ -1,0 +1,1 @@
+To run the database use mysql -u root, this does not requires password. If you use this command mysql -u root -p you may not grant access to database.
