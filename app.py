@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from config import Config
 from db import (
     get_all_categories,
     get_all_products,
@@ -9,6 +10,7 @@ from db import (
 )
 
 app = Flask(__name__)
+app.config.from_object(Config)
 
 @app.route("/")
 def index():
